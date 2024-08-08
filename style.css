@@ -1,35 +1,36 @@
-:root {
-  --color-light: lightgray;
-  --color-dark: darkgray;
-}
 html,
 body {
   margin: 0;
   padding: 0;
 }
 .container {
-  display: flex;
   height: 100vh;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.circle {
+.square {
   height: 1.5em;
   width: 1.5em;
-  background: #000;
+
   margin: 0.5em;
-  border-radius: 50%;
-  animation: pulse infinite alternate 1s;
+  animation: rotate infinite 1.5s;
+}
+.square1 {
+  background: red;
+}
+.square2 {
+  background: orange;
+}
+.square3 {
+  background: blue;
 }
 
-@keyframes pulse {
+@keyframes rotate {
   from {
-    background: var(--color-dark);
+    transform: rotate(-45deg);
   }
   to {
-    background: var(--color-light);
-    height: 1.6em;
-    width: 1.6em;
+    transform: rotate(45deg);
   }
 }
