@@ -1,36 +1,42 @@
+:root {
+  --black: #282828;
+  --blue: #2892f9;
+  --red: #fb2f27;
+  --yellow: #fdfe29;
+}
 html,
 body {
   margin: 0;
   padding: 0;
 }
-.container {
+.rings,
+.ring {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.square {
-  height: 1.5em;
-  width: 1.5em;
-
-  margin: 0.5em;
-  animation: rotate infinite 1.5s;
-}
-.square1 {
-  background: red;
-}
-.square2 {
-  background: orange;
-}
-.square3 {
-  background: blue;
+.ring {
+  border-radius: 50%;
 }
 
-@keyframes rotate {
-  from {
-    transform: rotate(-45deg);
-  }
-  to {
-    transform: rotate(45deg);
-  }
+.ring-1 {
+  height: 200px;
+  width: 200px;
+  background: var(--black);
+}
+.ring-2 {
+  height: 150px;
+  width: 150px;
+  background: var(--blue);
+}
+.ring-3 {
+  height: 100px;
+  width: 100px;
+  background: var(--red);
+}
+.bullseye {
+  height: 50px;
+  width: 50px;
+  background: var(--yellow);
 }
