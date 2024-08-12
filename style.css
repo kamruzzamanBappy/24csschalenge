@@ -2,39 +2,30 @@ html,
 body {
   margin: 0;
   padding: 0;
+  background: black;
 }
 :root {
-  --bg-word: #5134ff;
+  --red: #ed2938;
+  --white: #fff;
+  --blue: #002495;
+  --flag-height: 150px;
 }
-.container {
-  height: 100vh;
+.flag-france {
+  height: var(--flag-height);
+  width: calc(var(--flag-height) * 3 / 2);
+
+  margin: 2em auto;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
-h1:after {
-  content: "";
-  animation: 6s swap infinite;
-  background: var(--bg-word);
-  padding: 10px;
-  color: white;
-  border-radius: 4px;
-  margin-left: 4px;
+.stripe {
+  flex-grow: 1;
 }
-@keyframes swap {
-  0% {
-    content: "singing";
-  }
-  25% {
-    content: "playing";
-  }
-  50% {
-    content: "coding";
-  }
-  75% {
-    content: "Scrimba";
-  }
-  100% {
-    content: "Cricket";
-  }
+.red {
+  background: var(--red);
+}
+.blue {
+  background: var(--blue);
+}
+.white {
+  background: var(--white);
 }
